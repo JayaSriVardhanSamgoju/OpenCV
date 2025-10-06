@@ -90,7 +90,7 @@ cv2.waitKey(0)
 '''
 
 # Load image
-'''img = cv2.imread('IMG20230731112241.jpg')
+img = cv2.imread('IMG20230731112241.jpg')
 if img is None:
     raise FileNotFoundError("Image not found!")
 
@@ -111,20 +111,7 @@ for (x, y, w, h) in faces:
 imgSmall = cv2.resize(img, (0, 0), fx=0.5, fy=0.5)
 
 # Show result
-cv2.imshow('Detected Faces', imgSmall)'''
-
-
-
-for i in range(5):
-    cap = cv2.VideoCapture(1)
-    if cap.isOpened():
-        print(f"✅ Camera found at index {i}")
-        ret, frame = cap.read()
-        if ret:
-            cv2.imshow(f"Camera Index {i}", frame)
-            cv2.waitKey(1000)   # show each for 1 second
-        cap.release()
-
+cv2.imshow('Detected Faces', imgSmall)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
